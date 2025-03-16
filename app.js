@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', inicializar);
 
 function agregarAmigo() {
     const amigoNombre = capitalizarNombre(amigoInput.value.trim()); // Limpiar espacios en blanco y capitalizar el nombre
-    
+
     // Si hay un ganador previo, inicializar las variables
     if (resultado.children.length > 0) {
         inicializar();
@@ -29,7 +29,7 @@ function agregarAmigo() {
 
     // Validar si el nombre está vacío o si ya existe en la lista
     if (!amigoNombre) {
-        alert("Por favor, ingrese un nombre válido.");    
+        alert("Por favor, ingrese un nombre válido.");
     } else if (amigos.includes(amigoNombre)) {
         alert(`El nombre "${amigoNombre}" ya está en la lista.`);
     } else {
@@ -43,7 +43,7 @@ function agregarAmigo() {
 
     // Limpiar el campo de entrada y mantener el foco
     amigoInput.value = "";
-    amigoInput.focus();    
+    amigoInput.focus();
 }
 
 // Función para capitalizar cada palabra en el nombre compuesto
@@ -74,5 +74,5 @@ function sortearAmigo() {
     li.textContent = 'El amigo secreto sorteado es: ' + nombreGanador;
     li.style.color = 'green'; // Color verde
     li.style.fontWeight = 'bold'; // Letra bold
-    resultado.appendChild(li);    
+    resultado.appendChild(li);
 }
